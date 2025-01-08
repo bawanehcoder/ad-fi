@@ -11,12 +11,12 @@
         <div class="main-slider">
             @foreach ($sliders as $slider)
                 <div class="slider-item">
-                    <img src="{{ asset($slider->getFirstMediaUrl('slider', 'full')) }}" alt="Slide 1" />
+                    <img src="{{ asset($slider->getFirstMediaUrl('slider', 'full')) }}" alt="Slide 1" class="img-fluid" />
                     <div class="slider-content">
                         <img src="{{ asset('asset-files/imgs/slider/logo.gif') }}" alt="" class="slider-logo">
                         <h1>{{ $slider->title }}</h1>
                         <p>{{ $slider->url }}</p>
-                        <a href="{{ route('mainshop') }}" class="slider-btn">تسوق الان </a>
+                        <a href="{{ route('mainshop') }}" class="slider-btn btn btn-pink">تسوقgالان </a>
                     </div>
                     <img src="{{ asset($slider->getFirstMediaUrl('layer1', 'full')) }}" alt=""
                         data-aos="fade-up-right" data-aos-duration="1000" class="layer1 slide-layer">
@@ -26,8 +26,6 @@
                         data-aos="fade-down-right" data-aos-duration="1000" class="layer3 slide-layer">
                 </div>
             @endforeach
-
-
         </div>
     </section>
 
@@ -37,11 +35,10 @@
         </span>
     </section>
 
-
     <section class="about">
         <div class="container">
             <div class="row ccenter">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="row">
                         <div class="col-6 c-align" data-aos="fade-up">
                             <img src="{{ asset('asset-files/imgs/about/1.png') }}" class="img-fluid" />
@@ -51,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6" data-aos="fade-right">
+                <div class="col-12 col-md-6" data-aos="fade-right">
                     <h3 class="outheadein">
                         <span class="hh"></span>
                         ماذا عنا
@@ -59,18 +56,13 @@
                     <p>
                         هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
                         يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                        التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد،
-                        النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث
-                        يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                        التطبيق.
                     </p>
-                    <a href="{{ route('mainshop') }}" class="slider-btn">تسوق الان </a>
-
+                    <a href="{{ route('mainshop') }}" class="slider-btn btn btn-pink">تسوق الان </a>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <section class="cats">
         <div class="container">
@@ -85,7 +77,6 @@
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
                         role="tab" aria-controls="profile" aria-selected="false">خارج الاردن</button>
                 </li>
-
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -102,14 +93,12 @@
                             @endif
                             <a data-aos="fade-down" href="{{ route('products.index', ['rtype'=> $item->rtype ,'entity' => $item->id]) }}" class="maincatitem">
                                 <div class=" aaa item position-relative d-flex align-items-center justify-content-between ">
-                                    <img src="{{ $item->getFirstMediaUrl('categories') ?? '' }}" class="d-flex m-auto" />
+                                    <img src="{{ $item->getFirstMediaUrl('categories') ?? '' }}" class="d-flex m-auto img-fluid" />
                                 </div>
-                                {{-- <h3 class="mt-3 text-center">{{ $item->getName() }}</h3> --}}
                             </a>
                             @if ($i == 2)
                     </div>
                     @endif
-
                     @php
                         $i++;
                         if ($i == 3) {
@@ -133,14 +122,12 @@
                         @endif
                         <a data-aos="fade-down" href="{{ route('subshop', $item->id) }}" class="maincatitem">
                             <div class=" aaa item position-relative d-flex align-items-center justify-content-between ">
-                                <img src="{{ $item->getFirstMediaUrl('categories') ?? '' }}" class="d-flex m-auto" />
+                                <img src="{{ $item->getFirstMediaUrl('categories') ?? '' }}" class="d-flex m-auto img-fluid" />
                             </div>
-                            {{-- <h3 class="mt-3 text-center">{{ $item->getName() }}</h3> --}}
                         </a>
                         @if ($i == 2)
                 </div>
                 @endif
-
                 @php
                     $i++;
                     if ($i == 3) {
@@ -152,16 +139,12 @@
             </div>
 
         </div>
-
-
-
-        </div>
     </section>
 
     <section class="cards">
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="homecars">
                         <div class="row">
                             <div class="col-2">
@@ -175,8 +158,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="homecars">
                         <div class="row">
                             <div class="col-2">
@@ -190,8 +172,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-4">
+                <div class="col-12 col-md-4">
                     <div class="homecars">
                         <div class="row">
                             <div class="col-2">
@@ -209,7 +190,6 @@
     </section>
 
     @include('site.home.most-viewed-widget')
-
 
     <section class="download">
         <div class="container">

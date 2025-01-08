@@ -5367,7 +5367,7 @@ textarea.form-control {
     animation-fill-mode: both
 }
 
-.animation-style-04.swiper-slide-active .slider-content-04__title {
+.animation-style-04.swiper-slide-active .-04__title {
     -webkit-animation-name: fadeInrightBig;
     animation-name: fadeInrightBig;
     -webkit-animation-delay: 1s;

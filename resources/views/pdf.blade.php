@@ -20,10 +20,12 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border: 2px solid #e0d4f5;
+            max-width: 1200px;
         }
 
         .header {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             border-bottom: 2px solid #e0d4f5;
@@ -35,10 +37,6 @@
             height: auto;
         }
 
-        .header .company-info {
-            text-align: right;
-        }
-
         .header .company-info h1 {
             color: #6a1b9a;
             margin: 0;
@@ -47,6 +45,7 @@
         .details,
         .order-details {
             margin-top: 20px;
+            overflow-x: auto; 
         }
 
         .details table,
@@ -79,6 +78,40 @@
             text-align: center;
             font-size: 14px;
             color: #555;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .details th,
+            .details td,
+            .order-details th,
+            .order-details td {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .details th,
+            .details td,
+            .order-details th,
+            .order-details td {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .footer {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
